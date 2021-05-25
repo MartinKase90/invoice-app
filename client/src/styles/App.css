@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+
+body, app {
+  margin: 0;
+  height: 100vh;
+
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 48px ;
+  background-color: blue;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+#sidebar_content{
+  position: relative;
+  /* min-height: 100%;
+  padding-bottom: 40px; */
+}
+#sidebar_bottom{
+
+  display:inline-block;
+  /* position:absolute; */
+  left:15px;
+  bottom: 0;
+}
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.sidebar a.active {
+  background-color: #04AA6D;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 730px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
   }
+}
+
+/* card */
+.card {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  /* padding: 10px; */
+  width: 730px;
+  height: 72px;
+  /* margin: 50px; */
+  float: left;
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 672px;
+    height: 72px;
+
+  }
+  float: left;
+}
+@media screen and (max-width: 400px) {
+  .card {
+    width: 327px;
+    height: 134px;
+
+  }
+  div.content {margin-left: 0;}
 }

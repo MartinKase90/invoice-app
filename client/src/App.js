@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./styles/App.css";
-import DarkMode from "./components/DarkMode";
-
+import Card from "./components/Card";
+import SideBar from "./components/SideBar";
 class App extends Component {
     constructor(props) {
         super(props);
@@ -18,16 +18,21 @@ class App extends Component {
     componentDidMount() {
         this.callAPI();
     }
+    // componentWillMount() {
+    //   this.struct = document.createElement("app");
+    //   document.body.appendChild(this.struct);
+    // }
 
     render() {
         return (
-            <div className="App">
+          <div><SideBar/>
+          <Card/></div>
 
-                <DarkMode/>
-                <p className="App-intro">{this.state.apiResponse}</p>
-            </div>
+
+
         );
     }
 }
 
 export default App;
+      // <p className="App-intro">{this.state.apiResponse}</p>

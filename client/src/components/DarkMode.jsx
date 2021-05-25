@@ -37,7 +37,7 @@ const DarkMode = () => {
 
   return (
     <IconButton
-      aria-label={theme}
+      aria-label="toggle dark-mode"
       className={theme === "dark" ? clickedClass : ""}
       id="darkMode"
       onClick={(e) => switchTheme(e)}
