@@ -9,6 +9,7 @@ body, app {
 .sidebar {
   margin: 0;
   padding: 0;
+
   width: 48px ;
   background-color: blue;
   position: fixed;
@@ -50,7 +51,16 @@ div.content {
   height: 1000px;
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+@media screen and (max-width: 770px) {
   .sidebar {
     width: 100%;
     height: auto;
@@ -60,12 +70,12 @@ div.content {
   div.content {margin-left: 0;}
 }
 
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   .sidebar a {
     text-align: center;
     float: none;
   }
-}
+} */
 
 /* card */
 .card {
@@ -75,22 +85,117 @@ div.content {
   /* padding: 10px; */
   width: 730px;
   height: 72px;
+  /* padding-bottom: 10px; */
+  margin-bottom: 10px;
   /* margin: 50px; */
-  float: left;
+  /* float: left; */
 }
-@media screen and (max-width: 800px) {
+/* .invoices{
+  left: 355px;
+} */
+.invoices_title{
+  background: #fff;
+  box-shadow: 0 2px 5px #ccc;
+  border-radius: 7px;
+  width:730px;
+  height: 59px;
+  top:72px;
+  /* left: 355px; */
+  margin: 25px;
+}
+.invoices_title h1{
+  margin-bottom: 0px;
+  font-size: 32px;
+  margin-left: 0px;
+  width: 100px;
+}
+.invoices_title p{
+  margin-bottom: 0px;
+  margin-top: 0px;
+  width: 150px;
+}
+
+#column{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.invoice_list{
+  top: 196px;
+  /* padding-left: 25px; */
+}
+/* .colNumber, .colDate, .colAmount, .colStatus, .colName {
+  height: 50px;
+
+}
+
+
+} */
+.details_card{
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  width: 730px;
+  margin: 24px;
+}
+.details_card_buttons{
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  width: 327px;
+  margin: 24px;
+}
+.details_prices{
+  background: grey;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  width: 279px;
+  margin: 24px;
+}
+.details_total{
+  background: black;
+  border-radius: 7px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 2px 0 #ccc;
+}
+
+@media screen and (max-width: 1000px) {
   .card {
     width: 672px;
     height: 72px;
 
   }
-  float: left;
+
+  .invoices_title{
+    width: 672px;
+    height: 59px;
+  }
+  .invoice_list{
+    padding-left: 24px;
+  }
+  .details_card{
+    width: 672px;
+  }
+  /* float: left; */
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 770px) {
   .card {
     width: 327px;
     height: 134px;
 
   }
-  div.content {margin-left: 0;}
+  .invoices_title{
+    width: 327px;
+    height: 59px;
+  }
+
+  .invoice_list{
+    padding-left: 24px;
+  }
+  .details_card{
+    width: 327px;
+    margin: 24px;
+  }
+  /* div.content {margin-left: 0;} */
+    /* float: left; */
 }
