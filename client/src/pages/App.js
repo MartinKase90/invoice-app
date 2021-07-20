@@ -3,6 +3,7 @@
 import React from "react";
 import Home from "./Home";
 import Details from "./Details";
+import FormPage from "./FormPage";
 import {
   BrowserRouter as Router,
   Switch,
@@ -18,6 +19,7 @@ function App () {
       <Switch>
         <Route path="/" exact component={Home}/>
         <Route path="/index/:index" exact component={Details}/>
+        <Route path="/index/:index/edit" exact component={FormPage}/>
       </Switch>
   </Router>
 );

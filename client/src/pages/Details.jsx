@@ -36,7 +36,9 @@ function Details({match}){
         </Container>
       </div>
         <DetailsCard/>
-        <CardButtons/>
+        <CardButtons
+          id = {index}
+        />
     </div>
   );
 }
