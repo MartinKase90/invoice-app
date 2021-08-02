@@ -18,8 +18,8 @@ function App () {
   <Router>
       <Switch>
         <Route path="/" exact component={Home}/>
-        <Route path="/index/:index" exact component={Details}/>
-        <Route path="/index/:index/edit" exact component={FormPage}/>
+        <Route path="/index/:id" exact component={Details}/>
+        <Route path="/index/:id/edit" exact component={FormPage}/>
       </Switch>
   </Router>
 );

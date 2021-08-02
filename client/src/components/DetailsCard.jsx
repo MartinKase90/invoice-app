@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import DetailsContent from "../components/DetailsContent";
 import DetailsAddress from "../components/DetailsAddress";
 import DetailsPrices from "../components/DetailsPrices";
-function DetailsCard(){
+function DetailsCard(props){
 
   //first DetailsAddress is senders address
   //second DetailsAddress is recievers address
@@ -16,18 +16,18 @@ function DetailsCard(){
       <Container>
         <Row>
           <Col>
-            <h4>#xm9141</h4>
-            <h5>Graphic Design</h5>
+            <h4>#{props.id}</h4>
+            <h5>{props.description}</h5>
           </Col>
           <Col></Col>
         </Row>
         <Row>
           <Col>
             <DetailsAddress
-              street = {'84 church way'}
-              city = {'Bradford'}
-              postCode = {'BDI 9PB'}
-              country = {'United Kingdom'}
+              street = {props.senderStreet}
+              city = {props.senderCity}
+              postCode = {props.senderPostCode}
+              country = {props.senderCountry}
             />
           </Col>
           <Col></Col>
@@ -36,23 +36,23 @@ function DetailsCard(){
           <Col>
           <DetailsContent
             greyText = {'Invoice Date'}
-            blackText = {'21 Aug 2021'}
+            blackText = {props.createdAt}
           />
           <DetailsContent
             greyText = {'Payment Due'}
-            blackText = {'20 Sep 2021'}
+            blackText = {props.paymentDue}
           />
           </Col>
           <Col>
             <DetailsContent
               greyText = {'Bill To'}
-              blackText = {'Alex Grim'}
+              blackText = {props.clientName}
             />
             <DetailsAddress
-              street = {'84 church way'}
-              city = {'Bradford'}
-              postCode = {'BDI 9PB'}
-              country = {'United Kingdom'}
+              street = {props.clientStreet}
+              city = {props.clientCity}
+              postCode = {props.clientPostCode}
+              country = {props.clientCountry}
             />
           </Col>
         </Row>
@@ -60,14 +60,16 @@ function DetailsCard(){
           <Col>
           <DetailsContent
             greyText = {'Sent To'}
-            blackText = {'alexgrim@mail.com'}
+            blackText = {props.clientEmail}
           />
           </Col>
           <Col>
           </Col>
         </Row>
       </Container>
-      <DetailsPrices/>
+      <DetailsPrices
+      
+      />
     </div>
   );
 }

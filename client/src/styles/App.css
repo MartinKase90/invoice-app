@@ -51,24 +51,7 @@ div.content {
   height: 1000px;
 }
 
-@media screen and (max-width: 1000px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-@media screen and (max-width: 770px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
+
 
 /* @media screen and (max-width: 400px) {
   .sidebar a {
@@ -160,30 +143,75 @@ div.content {
 }
 
 @media screen and (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
   .card {
     width: 672px;
     height: 72px;
 
   }
-
+  .invoices{
+    padding-left: 330px;
+  }
   .invoices_title{
     width: 672px;
     height: 59px;
+
   }
   .invoice_list{
-    padding-left: 24px;
+    padding-left: 355px;
+
   }
   .details_card{
     width: 672px;
   }
   /* float: left; */
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 771px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+
+  .card {
+    width: 672px;
+    height: 72px;
+
+  }
+  /* .invoices{
+    padding-left: 25px;
+  } */
+  .invoices_title{
+    width: 672px;
+    height: 59px;
+    padding-left: 50px;
+  }
+  .invoice_list{
+    padding-left: 50px;
+
+  }
+  .details_card{
+    width: 672px;
+  }
+}
+@media screen and (max-width: 450px) {
   .card {
     width: 327px;
     height: 134px;
 
   }
+  /* .invoices{
+    padding-left: 14px;
+  } */
   .invoices_title{
     width: 327px;
     height: 59px;
@@ -191,11 +219,19 @@ div.content {
 
   .invoice_list{
     padding-left: 24px;
+    paddin-right: 24px;
   }
   .details_card{
     width: 327px;
     margin: 24px;
   }
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
   /* div.content {margin-left: 0;} */
     /* float: left; */
 }

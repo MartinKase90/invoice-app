@@ -1,5 +1,10 @@
 
 import React, {useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+
+  Link
+} from "react-router-dom";
 import "../styles/App.css";
 
 import SideBar from "../components/SideBar";
@@ -34,7 +39,8 @@ function Home(){
           <InvoiceHeader/>
           <div className="invoice_list">
           {items.map((item, index) => (
-            <a href={'/index/'+ index} key={index}>
+
+            <Link to={{pathname: '/index/' + item.id}} key={index}>
               <Card
                 key = {index}
                 id = {item.id}
@@ -43,11 +49,14 @@ function Home(){
                 clientName = {item.clientName}
                 status = {item.status}
               />
-            </a>
+
+            </Link>
           ))}
           </div>
         </div>
        );
     }
 }
+      //        <a href={'/index/'+ item.id} key={index}>
+      //      </a>
 export default Home;
